@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cats-cert
+spec:
+  secretName: cats-tls
+  dnsNames:
+    - mukhtasar.online
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: mukhtasar.online  
